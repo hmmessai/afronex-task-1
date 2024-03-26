@@ -22,7 +22,8 @@ ul {
 }
 
 .content{
-    padding: 5px 10px 5px;
+    padding: 10px 25px 10px;
+    text-align: left;
 }
 
 .header{
@@ -52,4 +53,16 @@ ul {
     border-top: solid 0.25px black;
     padding:  5px 10px 5px;
     height: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover{
+    
+}
+
+.header:hover{
+    background-color: #ddd4d4;
+    color: #282c34;
 }

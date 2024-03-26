@@ -53,10 +53,12 @@ const Post = (props) => {
           const formattedDate = formatDate(post.created_at)
           return (
             <li className='post' key={post.id}>
-              <div className="header">
-                <div>{post.title}</div>
-                <div>Author: {post.name}</div>
-              </div>
+              <a href={`/?id=${post.id}`}>
+                <div className="header">
+                  <div>{post.title}</div>
+                  <div>Author: {post.name}</div>
+                </div>
+              </a>
               <p className='content'>{post.content}</p>
               <p className='content'>{post.id}</p>
               <div className="footer">
