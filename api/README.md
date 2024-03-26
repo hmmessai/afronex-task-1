@@ -24,4 +24,4 @@ The API has the following endpoints for accessing data.
 | Endpoint | Request type | Expected values in json | Return Value |
 | -------- | ------------ | ----------------------- | ------------ |
 | /post/add| POST |user_id, title, content | data: { post_id: _some value_ }|
-| /post/all | GET | | Array of post objects with the following format:- data: [{ id: *some value*, user_id: *some value*, title: *some value*, content: *some value*,name: *some value*} ] |
+| /post/all | GET | | Array of post objects with the following format:- data: [{ id: *some value*, user_id: *some value*, title: *some value*, content: *some value*, name: *some value*} ] |
