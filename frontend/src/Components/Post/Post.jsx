@@ -56,11 +56,14 @@ const Post = (props) => {
               <a href={`/?id=${post.id}`}>
                 <div className="header">
                   <div>{post.title}</div>
-                  <div>Author: {post.name}</div>
+                  <div className="author">Author: {post.name}</div>
                 </div>
               </a>
-              <p className='content'>{post.content}</p>
-              <p className='content'>{post.id}</p>
+              <p className='content'>{post.content.slice(0, 250)}.....
+                <a href={`/?id=${post.id}`}>
+                  <h2>Read More</h2>
+                </a>
+              </p>
               <div className="footer">
                 <p className="time">{formattedDate}</p>
                 <p className='timeago'>{formattedTimeAgo}</p>

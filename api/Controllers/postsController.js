@@ -29,7 +29,7 @@ const allPosts = async (req, res) => {
       `SELECT posts.id, posts.content, posts.user_id, posts.title, users.name, posts.created_at FROM posts LEFT JOIN users ON posts.user_id=users.id;`
     );
     res.status(200).json({
-      status: false,
+      status: true,
       message: "Successfully fetched all Posts",
       data: all[0],
     });
