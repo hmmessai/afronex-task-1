@@ -2,7 +2,7 @@ import React from "react"
 import './Post.css';
 
 const Post = (props) => {
-  const {posts} = props;
+  const {posts, id} = props;
   function timeAgo(date) {
     const currentDate = new Date();
     const timestamp = date.getTime();
@@ -44,10 +44,11 @@ const Post = (props) => {
     return dateTimeB - dateTimeA
   }); // Sort by most recent first
 
+
   return (
     <div className="post-div">
       <ul>
-        {sortedPosts.map((post) => {
+        {posts.map((post) => {
           const dateTime = new Date(post.created_at);
           const formattedTimeAgo = timeAgo(dateTime); 
           const formattedDate = formatDate(post.created_at)
@@ -70,7 +71,7 @@ const Post = (props) => {
               </div>
             </li>
           ); 
-        })}    
+        })}
       </ul>
     </div>
   )
